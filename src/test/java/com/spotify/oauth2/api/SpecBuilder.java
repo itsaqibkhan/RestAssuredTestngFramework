@@ -14,7 +14,7 @@ public class SpecBuilder {
 
     public static RequestSpecification getRequestSpec(){
         return new RequestSpecBuilder().
-                setBaseUri(System.getProperty("BASE_URI")).  //when runnining through mvn command
+                setBaseUri(System.getProperty("BASE_URI")).  //when running through mvn command
 //                setBaseUri("https://api.spotify.com").
                 setBasePath(BASE_PATH).
                 setContentType(ContentType.JSON).
@@ -25,7 +25,7 @@ public class SpecBuilder {
 
     public static RequestSpecification getAccountRequestSpec(){
         return new RequestSpecBuilder().
-                setBaseUri(System.getProperty("ACCOUNT_BASE_URI")). //when runnining through mvn command
+                setBaseUri(System.getProperty("ACCOUNT_BASE_URI")). //when running through mvn command
 //                setBaseUri("https://accounts.spotify.com").
                 setContentType(ContentType.URLENC).
                 addFilter(new AllureRestAssured()).
